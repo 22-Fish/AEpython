@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# C 构建产物
+*.o
+*.obj
+launcher_res.o
+tools/embedded_files.h
+AEpy.exe
+
+# 运行时状态（本机记忆，不应入库）
+config/last_file.json
+config/last_folder.json
+config/splitter.json
+
+# 右键菜单脚本导出的注册表备份
+_regbackup/

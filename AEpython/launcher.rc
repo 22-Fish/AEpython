@@ -1,0 +1,38 @@
+/* launcher.rc - 启动器资源：图标、应用程序清单、版本信息 */
+#include <windows.h>
+
+#define IDI_APPICON 101
+
+/* 程序图标（资源 ID 最小，资源管理器用它作为 AEpy.exe 的图标） */
+IDI_APPICON ICON "assets\\AEpy.ico"
+
+/* 应用程序清单：1 = CREATEPROCESS_MANIFEST_RESOURCE_ID，24 = RT_MANIFEST */
+1 24 "app.manifest"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0x0L
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "AEpy"
+            VALUE "FileDescription", "AEpy Launcher"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "AEpy"
+            VALUE "OriginalFilename", "AEpy.exe"
+            VALUE "ProductName", "AEpy"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

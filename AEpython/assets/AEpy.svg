@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400" shape-rendering="geometricPrecision">
+  <!--
+    整体缩放并居中：把图形放大到画布高度约 90%，四周只留约 5% 空白。
+    下面 <g> 里三个变换的含义：
+      translate(100,100)  移到画布中心
+      scale(1.23)         放大（数值越大留白越少，过大会被画布裁掉）
+      translate(-100,-110) 先把原图内容包围盒的中心对齐到原点
+    原图内容包围盒（含描边）为 x 37~163、y 37~183，中心是 (100,110)。
+  -->
+  <g transform="translate(100,100) scale(1.23) translate(-100,-110)">
+    <!-- 盾牌外轮廓，纯黑白边框
+         注意：右侧 (160,100) → (140,100) → (140,120) → (160,120) 这段
+         向内凹的方形缺口是刻意的设计，不是绘制失误，请勿“修平”。 -->
+    <path d="M 40 40
+             L 160 40
+             L 160 100
+             L 140 100
+             L 140 120
+             L 160 120
+             L 160 140
+             L 100 180
+             L 40 140
+             Z"
+          fill="none" stroke="black" stroke-width="6" stroke-linejoin="miter" />
+    <!-- 中间文字排列的“口”字图案，按 口 口 / 口 排布
+         纵向间隔与横向间隔统一为 24，形成规整的两行两列网格（右下角留空）：
+           左列 x=68、右列 x=112（列中心距 44，水平间距 24）
+           上行 y=63、下行 y=107（行中心距 44，竖向间距 24）
+         整块网格中心保持在 (100, 95)。 -->
+    <rect x="68" y="63" width="20" height="20" fill="none" stroke="black" stroke-width="4" />
+    <rect x="112" y="63" width="20" height="20" fill="none" stroke="black" stroke-width="4" />
+    <rect x="68" y="107" width="20" height="20" fill="none" stroke="black" stroke-width="4" />
+  </g>
+</svg>

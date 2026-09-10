@@ -1,0 +1,19 @@
+{
+  "安装包名": "AEpython安装包",
+  "源目录": "../AEpython",
+  "输出目录": ".",
+  "模板目录": "源码",
+  "应用名": "AEpy",
+  "安装目录名": "AEpy",
+  "主程序": "AEpy.exe",
+  "版本": "1.0.0",
+  "发布者": "AEpy",
+  "图标": "../AEpython/assets/AEpy.ico",
+  "排除打包": [
+    "./config",
+    "./_regbackup",
+    "./.git",
+    "./launcher.c",
+    "./launcher.rc",
+  ]
+}
